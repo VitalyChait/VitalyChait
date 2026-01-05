@@ -5,12 +5,10 @@
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
-│  ▓▓▓▓  microchip daydreams  ▓▓▓▓     systems at scale         │
-│  ░░░░  signals → insight   ░░░░     reliability → calm        │
+│  ▓▓▓▓  microchip daydreams  ▓▓▓▓     systems at scale        │
+│  ░░░░  signals → insight   ░░░░     reliability → calm       │
 └──────────────────────────────────────────────────────────────┘
 ```
-
-I sail with ⛵ — and I like building practical software.
 
 
 ## Skill tree
