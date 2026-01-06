@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Vitaly Chait — player card">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="80%">
+      <stop offset="0%" stop-color="#1f2428"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </radialGradient>
+
+    <linearGradient id="scanlines" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#000" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#000" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="glowGreen" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glowBlue" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glowPurple" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+      .pix  { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-weight: 800; letter-spacing: 1.2px; }
+      .muted { fill: #8b949e; }
+      .text { fill: #c9d1d9; }
+      .border { stroke: #30363d; stroke-width: 2; }
+      .panel { fill: #161b22; }
+      .green { fill: #39d353; }
+      .blue { fill: #58a6ff; }
+      .purple { fill: #bc8cff; }
+      .pill { fill: #000; fill-opacity: 0.25; stroke: #30363d; stroke-width: 1.5; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="675" fill="url(#bg)"/>
+
+  <!-- Card -->
+  <g transform="translate(60,55)">
+    <rect x="0" y="0" rx="14" ry="14" width="1080" height="565" class="panel border"/>
+
+    <!-- Scanlines overlay -->
+    <g opacity="0.18">
+      <rect x="0" y="0" width="1080" height="565" fill="url(#scanlines)"/>
+      <g opacity="0.45">
+        <!-- horizontal stripes -->
+        <g>
+          <rect x="0" y="0" width="1080" height="2" fill="#000"/>
+          <rect x="0" y="4" width="1080" height="2" fill="#000"/>
+          <rect x="0" y="8" width="1080" height="2" fill="#000"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- Sidebar divider -->
+    <line x1="340" y1="24" x2="340" y2="541" stroke="#30363d" stroke-width="2" stroke-dasharray="6 6"/>
+
+    <!-- Sidebar -->
+    <g transform="translate(28,28)">
+      <!-- Avatar frame -->
+      <rect x="64" y="18" width="156" height="156" class="border" fill="transparent" stroke="#39d353" stroke-width="5" filter="url(#glowGreen)"/>
+      <rect x="74" y="28" width="136" height="136" fill="#0b0f14" stroke="#30363d" stroke-width="2"/>
+      <!-- Minimal "avatar" silhouette -->
+      <g transform="translate(142,96)">
+        <circle cx="0" cy="-18" r="20" fill="#c9d1d9" opacity="0.18"/>
+        <path d="M -48 54 C -42 16, -20 4, 0 4 C 20 4, 42 16, 48 54 Z" fill="#c9d1d9" opacity="0.14"/>
+      </g>
+
+      <!-- Level badge -->
+      <g transform="translate(42,188)">
+        <rect x="32" y="0" width="210" height="38" rx="8" ry="8" fill="#bc8cff" class="border" stroke="#ffffff" stroke-width="2" filter="url(#glowPurple)"/>
+        <text x="137" y="25" text-anchor="middle" class="pix" font-size="14" fill="#0d1117">LVL 31 ENGINEER</text>
+      </g>
+
+      <!-- Bars -->
+      <g transform="translate(0,248)" class="mono">
+        <!-- HP -->
+        <text x="0" y="20" class="text" font-size="14">HP</text>
+        <rect x="80" y="10" width="230" height="14" fill="#000" class="border"/>
+        <rect x="82" y="12" width="226" height="10" fill="#39d353" filter="url(#glowGreen)"/>
+
+        <!-- MP -->
+        <text x="0" y="54" class="text" font-size="14">MP (Code)</text>
+        <rect x="80" y="44" width="230" height="14" fill="#000" class="border"/>
+        <rect x="82" y="46" width="205" height="10" fill="#58a6ff" filter="url(#glowBlue)"/>
+
+        <!-- XP -->
+        <text x="0" y="88" class="text" font-size="14">XP</text>
+        <rect x="80" y="78" width="230" height="14" fill="#000" class="border"/>
+        <rect x="82" y="80" width="170" height="10" fill="#bc8cff" filter="url(#glowPurple)"/>
+      </g>
+
+      <!-- Left-justified info -->
+      <g transform="translate(0,362)" class="mono">
+        <text x="0" y="0" class="muted" font-size="12">STATUS</text>
+        <text x="0" y="26" class="text" font-size="14">
+          <tspan class="text" font-weight="700">GUILD:</tspan>
+          <tspan class="blue" font-weight="700"> @Neuroblade</tspan>
+          <tspan class="text"> | @Brandeis</tspan>
+        </text>
+        <text x="0" y="52" class="text" font-size="14">
+          <tspan class="text" font-weight="700">MOUNT:</tspan>
+          <tspan class="text"> Windows 🪟 | Linux 🐧</tspan>
+        </text>
+        <text x="0" y="78" class="text" font-size="14">
+          <tspan class="text" font-weight="700">LOC:</tspan>
+          <tspan class="text"> Boston | Tel Aviv</tspan>
+        </text>
+      </g>
+    </g>
+
+    <!-- Main content -->
+    <g transform="translate(380,40)" class="mono">
+      <text x="0" y="0" class="muted" font-size="12">PLAYER</text>
+      <text x="0" y="38" class="pix blue" font-size="34" filter="url(#glowBlue)">VITALY CHAIT</text>
+      <text x="0" y="66" class="green" font-size="14" font-weight="800" filter="url(#glowGreen)">SYSTEM ARCHITECT // PYTHON MAGE</text>
+
+      <g transform="translate(0,96)">
+        <rect x="0" y="0" width="660" height="84" class="panel border" fill="#000" fill-opacity="0.25"/>
+        <text x="18" y="28" class="muted" font-size="12">VOICELINE</text>
+        <text x="18" y="56" class="text" font-size="18">“Abracadabra 🪄 Systems at scale.”</text>
+      </g>
+
+      <!-- Skill tree pills -->
+      <g transform="translate(0,210)">
+        <text x="0" y="0" class="purple pix" font-size="14" filter="url(#glowPurple)">SKILL TREE</text>
+        <g transform="translate(0,18)">
+          <!-- row 1 -->
+          <rect x="0" y="0" width="170" height="34" rx="10" ry="10" class="pill"/>
+          <text x="16" y="22" class="text" font-size="14">✨ Agentic Web</text>
+
+          <rect x="186" y="0" width="110" height="34" rx="10" ry="10" class="pill"/>
+          <text x="202" y="22" class="text" font-size="14">🐍 Python</text>
+
+          <rect x="312" y="0" width="92" height="34" rx="10" ry="10" class="pill"/>
+          <text x="328" y="22" class="text" font-size="14">♨️ Java</text>
+
+          <rect x="420" y="0" width="160" height="34" rx="10" ry="10" class="pill"/>
+          <text x="436" y="22" class="text" font-size="14">💾 SoC Tools</text>
+
+          <!-- row 2 -->
+          <rect x="0" y="46" width="170" height="34" rx="10" ry="10" class="pill"/>
+          <text x="16" y="68" class="text" font-size="14">⚙️ System Arch</text>
+
+          <rect x="186" y="46" width="150" height="34" rx="10" ry="10" class="pill"/>
+          <text x="202" y="68" class="text" font-size="14">🔍 Analytics</text>
+
+          <rect x="352" y="46" width="186" height="34" rx="10" ry="10" class="pill"/>
+          <text x="368" y="68" class="text" font-size="14">🎯 Observability</text>
+
+          <rect x="554" y="46" width="170" height="34" rx="10" ry="10" class="pill"/>
+          <text x="570" y="68" class="text" font-size="14">🔧 Craft</text>
+        </g>
+      </g>
+
+      <!-- Footer buttons (visual only) -->
+      <g transform="translate(0,420)">
+        <rect x="0" y="0" width="320" height="44" rx="10" ry="10" fill="transparent" stroke="#39d353" stroke-width="2" filter="url(#glowGreen)"/>
+        <text x="160" y="28" text-anchor="middle" class="pix" font-size="13" fill="#39d353">VIEW GITHUB</text>
+
+        <rect x="340" y="0" width="320" height="44" rx="10" ry="10" fill="transparent" stroke="#58a6ff" stroke-width="2" filter="url(#glowBlue)"/>
+        <text x="500" y="28" text-anchor="middle" class="pix" font-size="13" fill="#58a6ff">CONTACT</text>
+
+        <text x="0" y="78" class="muted" font-size="12">github.com/VitalyChait  ·  linkedin.com/in/vitaly-chait</text>
+      </g>
+    </g>
+  </g>
+</svg>
