@@ -1,3 +1,8 @@
 ![Vitaly Chait — player card](./player-card.svg)
 
-[Open the interactive HTML version](https://vitalychait.github.io/)
+<p align="center">
+  <a href="https://vitalychait.github.io/"><strong>>>> OPEN THE INTERACTIVE HTML VERSION <<<<</strong></a>
+</p>
+<p align="center">
+  <em>Click to launch the full interactive experience</em>
+</p>
