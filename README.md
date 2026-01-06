@@ -1,3 +1,3 @@
 ![Vitaly Chait — player card](./player-card.svg)
 
-[Open the interactive HTML version](https://vitalychait.github.io/) · [Source](./index.html)
+[Open the interactive HTML version](https://vitalychait.github.io/)
